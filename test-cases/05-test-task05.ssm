@@ -1,0 +1,35 @@
+	LDC 0
+	LDR HP
+	ADD
+	STR HP
+	Bsr main
+	HALT
+main:
+	LINK 1
+	LDC 0
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	BRA 21
+	LDL 1
+	TRAP 0
+	LDC 0
+	AJS -1
+	LDL 1
+	LDC 1
+	ADD
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	LDL 1
+	LDC 5
+	LT
+	BRT -28
+	LDC 0
+	STR RR
+	UNLINK
+	STS 0
+	AJS 1
+	RET
