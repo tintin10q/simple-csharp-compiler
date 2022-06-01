@@ -1,0 +1,101 @@
+	LDC 2
+	LDR HP
+	ADD
+	STR HP
+	Bsr main
+	HALT
+main:
+	LINK 1
+	LDC 1
+	LDS 0
+	LDR HP
+	LDAA -2
+	STA 0
+	AJS -1
+	LDC 0
+	STR RR
+	UNLINK
+	STS 0
+	AJS 1
+	RET
+square:
+	LINK 1
+	LDL -2
+	LDL -2
+	MUL
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	LDL 1
+	STR RR
+	UNLINK
+	STS -1
+	AJS 0
+	RET
+	STS -1
+	AJS 0
+	RET
+abs:
+	LINK 0
+	LDL -2
+	LDC 0
+	LT
+	BRF 15
+	LDC 0
+	LDL -2
+	SUB
+	LDS 0
+	LDLA -2
+	STA 0
+	AJS -1
+	BRA 0
+	LDL -2
+	STR RR
+	UNLINK
+	STS -1
+	AJS 0
+	RET
+	STS -1
+	AJS 0
+	RET
+fac:
+	LINK 2
+	LDC 1
+	LDS 0
+	LDLA 2
+	STA 0
+	AJS -1
+	LDC 1
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	BRA 26
+	LDL 1
+	LDL 2
+	MUL
+	LDS 0
+	LDLA 1
+	STA 0
+	AJS -1
+	LDL 2
+	LDC 1
+	ADD
+	LDS 0
+	LDLA 2
+	STA 0
+	AJS -1
+	LDL 2
+	LDL -2
+	LE
+	BRT -33
+	LDL 1
+	STR RR
+	UNLINK
+	STS -1
+	AJS 0
+	RET
+	STS -1
+	AJS 0
+	RET
