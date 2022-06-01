@@ -9,20 +9,13 @@ Features include methods with parameters, recursion, while loops, for loops,  lo
 
 The follwing operators are implemented: 
 
--  \* 
--  / 
--  % 
+-  \*  /  % 
 
--  \+ 
--  \-
+-  \+ \-
 
--  <=
--  <
--  \>= 
--  \>
+-  <= <  \>=   \>
 
--  == 
--  !=
+-  == !=
 
 -  ^
 
